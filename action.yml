@@ -1,0 +1,25 @@
+name: 'Runs dockle'
+description: 'Container Image Linter with dockle'
+author: 'hands-lab'
+inputs:
+  image:
+    description: 'image name'
+    required: true
+  exit-code:
+    description: 'exit code when alerts were found'
+    required: false
+    default: '0'
+  exit-level:
+    description: 'alert level (INFO, WARN, FATAL)'
+    required: false
+    default: 'WARN'
+runs:
+  using: 'docker'
+  image: 'docker://goodwithtech/dockle:latest'
+  args:
+    - '--exit-code=${{ inputs.exit-code }}'
+    - '--exit-level=${{ inputs.exit-level }}'
+    - '${{ inputs.image }}'
+branding:
+  icon: 'search'
+  color: 'green'
