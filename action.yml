@@ -13,6 +13,9 @@ inputs:
     description: 'alert level (INFO, WARN, FATAL)'
     required: false
     default: 'WARN'
+outputs:
+  result:
+    description: 'dockle execution result'
 runs:
   using: 'docker'
   image: 'docker://goodwithtech/dockle:latest'
