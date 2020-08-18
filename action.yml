@@ -17,8 +17,8 @@ runs:
   using: 'docker'
   image: 'docker://goodwithtech/dockle:latest'
   args:
-    - '--exit-code ${{ inputs.exit-code }}'
-    - '--exit-level ${{ inputs.exit-level }}'
+    - '--exit-code=${{ inputs.exit-code }}'
+    - '--exit-level=${{ inputs.exit-level }}'
     - '${{ inputs.image }}'
 branding:
   icon: 'search'
