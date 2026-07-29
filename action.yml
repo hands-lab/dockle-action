@@ -1,5 +1,5 @@
 name: 'Runs dockle'
-description: 'Container Image Linter with dockle'
+description: '[Deprecated] Container Image Linter with dockle'
 author: 'hands-lab'
 inputs:
   image:
